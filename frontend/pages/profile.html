@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101719">
+  <title>Your Profile | SYNDEO</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</head>
+<body class="app-shell" data-page="profile">
+  <header class="app-header">
+    <nav class="app-nav container" aria-label="Main navigation">
+      <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
+      <span class="app-demo-indicator">Demo mode · sample data</span>
+      <div class="app-nav-links">
+        <a href="dashboard.html" data-page-transition>Home</a>
+        <a href="profile.html" aria-current="page">My profile</a>
+        <a href="discover.html" data-page-transition>Discover</a>
+        <a href="circles.html" data-page-transition>Circles</a>
+        <a href="projects.html" data-page-transition>Projects</a>
+        <a href="../index.html" data-page-transition>Back to SYNDEO</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <header class="app-heading">
+      <p class="eyebrow">YOUR STARTING POINT</p>
+      <h1>Build your profile.</h1>
+      <p>Share the skills, interests, experience, and availability you would bring to a collaboration. You can review everything before saving.</p>
+    </header>
+
+    <p class="demo-notice" role="note">Frontend demo: your profile is stored only in this browser on this device. It is not synced to SYNDEO or visible to other people.</p>
+    <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
+
+    <div class="profile-layout">
+      <section class="app-panel profile-editor" aria-labelledby="profile-form-title">
+        <h2 id="profile-form-title">Your details</h2>
+        <p class="app-panel-intro">A few thoughtful details help make a useful introduction. You can edit these any time.</p>
+
+        <form class="app-form" id="profile-form">
+          <div class="app-form-grid">
+            <div class="app-field app-field-full">
+              <label for="profile-name">Full name</label>
+              <input id="profile-name" name="name" type="text" maxlength="80" autocomplete="name" required>
+            </div>
+
+            <div class="app-field app-field-full">
+              <label for="profile-bio">A little about you</label>
+              <textarea id="profile-bio" name="bio" maxlength="280" placeholder="What do you enjoy learning, making, or exploring?"></textarea>
+              <small>Up to 280 characters.</small>
+            </div>
+
+            <div class="app-field app-field-full">
+              <label for="profile-photo">Profile picture <span class="app-help">(optional)</span></label>
+              <div class="profile-photo-control">
+                <input id="profile-photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp">
+                <small>Choose a JPG, PNG, or WebP image up to 1 MB. The picture stays in this browser demo.</small>
+                <div class="profile-photo-actions">
+                  <button class="button button-subtle" id="remove-photo" type="button" hidden>Remove picture</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-field app-field-full">
+              <span class="app-legend" id="skills-label">Skills</span>
+              <div class="chip-entry">
+                <label class="visually-hidden" for="skill-entry">Add a skill</label>
+                <input id="skill-entry" type="text" maxlength="40" placeholder="e.g. UX research">
+                <button class="button button-subtle" id="add-skill" type="button" aria-describedby="skills-help">Add skill</button>
+              </div>
+              <small id="skills-help">Add one skill at a time. Select a skill chip to remove it.</small>
+              <div class="chip-list" id="skill-list" aria-labelledby="skills-label"></div>
+            </div>
+
+            <div class="app-field app-field-full">
+              <span class="app-legend" id="interests-label">Interests and areas of focus</span>
+              <div class="chip-entry">
+                <label class="visually-hidden" for="interest-entry">Add an interest</label>
+                <input id="interest-entry" type="text" maxlength="40" placeholder="e.g. sustainable design">
+                <button class="button button-subtle" id="add-interest" type="button" aria-describedby="interests-help">Add interest</button>
+              </div>
+              <small id="interests-help">Add a few topics you care about; select a chip to remove it.</small>
+              <div class="chip-list" id="interest-list" aria-labelledby="interests-label"></div>
+            </div>
+
+            <div class="app-field">
+              <label for="experience">Experience</label>
+              <select id="experience" name="experience">
+                <option value="">Choose a level</option>
+                <option>Exploring</option>
+                <option>Some experience</option>
+                <option>Experienced</option>
+                <option>Can mentor others</option>
+              </select>
+            </div>
+
+            <div class="app-field">
+              <label for="profile-goal">What would you like to do?</label>
+              <input id="profile-goal" name="goal" type="text" maxlength="120" placeholder="Learn, build, or explore">
+            </div>
+
+            <fieldset class="app-field app-field-full availability-field">
+              <legend class="app-legend">Availability</legend>
+              <small class="app-help">Choose any that describe when you might collaborate.</small>
+              <div class="availability-options">
+                <label class="availability-option"><input type="checkbox" name="availability" value="Flexible"> Flexible</label>
+                <label class="availability-option"><input type="checkbox" name="availability" value="Weekdays"> Weekdays</label>
+                <label class="availability-option"><input type="checkbox" name="availability" value="Evenings"> Evenings</label>
+                <label class="availability-option"><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="app-actions">
+            <button class="button" type="submit">Save profile</button>
+            <a class="button button-outline" href="discover.html" data-page-transition>Explore collaborators <span aria-hidden="true">↗</span></a>
+          </div>
+        </form>
+      </section>
+
+      <aside class="app-panel profile-preview" aria-labelledby="profile-preview-title">
+        <p class="eyebrow">LIVE PREVIEW</p>
+        <div class="profile-preview-top">
+          <div class="profile-avatar" id="profile-avatar" aria-label="Profile picture preview">?</div>
+          <div>
+            <h2 id="profile-preview-title">Your profile</h2>
+            <p id="preview-experience">Add details to introduce yourself.</p>
+          </div>
+        </div>
+        <p class="profile-preview-copy" id="preview-bio">Your introduction will appear here.</p>
+        <section class="profile-preview-section" aria-labelledby="preview-skills-title">
+          <h3 id="preview-skills-title">Skills</h3>
+          <div class="tag-list" id="preview-skills"></div>
+        </section>
+        <section class="profile-preview-section" aria-labelledby="preview-interests-title">
+          <h3 id="preview-interests-title">Interests</h3>
+          <div class="tag-list" id="preview-interests"></div>
+        </section>
+        <section class="profile-preview-section" aria-labelledby="preview-goal-title">
+          <h3 id="preview-goal-title">Looking to</h3>
+          <p class="profile-preview-copy" id="preview-goal">Add a goal when you are ready.</p>
+        </section>
+        <section class="profile-preview-section" aria-labelledby="preview-availability-title">
+          <h3 id="preview-availability-title">Availability</h3>
+          <div class="tag-list" id="preview-availability"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

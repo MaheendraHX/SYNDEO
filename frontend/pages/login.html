@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101719">
+
+  <meta
+    name="description"
+    content="Sign in to SYNDEO, your space to connect, collaborate, and create."
+  >
+
+  <title>Sign In | SYNDEO</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <script src="../js/page-transitions.js" defer></script>
+</head>
+
+<body>
+  <main class="auth-layout">
+
+    <!-- Brand panel -->
+    <section class="auth-brand">
+      <a class="auth-logo" href="../index.html" aria-label="SYNDEO home" data-page-transition>
+        SYNDEO<span aria-hidden="true">.</span>
+      </a>
+
+      <div class="auth-brand-content">
+        <p class="eyebrow">YOUR PEOPLE. YOUR IDEAS.</p>
+
+        <h1>Better things happen together.</h1>
+
+        <p>
+          Find your people, share what you're building, and turn
+          good ideas into something real.
+        </p>
+      </div>
+
+      <footer class="auth-brand-footer">
+        A space to connect. A place to create.
+      </footer>
+    </section>
+
+    <!-- Login form -->
+    <section class="auth-panel" aria-labelledby="login-title">
+      <div class="auth-form-wrap">
+        <p class="eyebrow">WELCOME BACK</p>
+
+        <h2 id="login-title">Good to see you.</h2>
+
+        <p class="auth-subtitle">
+          Sign in to pick up where you left off.
+        </p>
+        <p class="auth-backend-note">Login is not connected yet. Use the demo option to explore the frontend without signing in.</p>
+
+        <form class="auth-form" id="login-form">
+          <div class="form-field">
+            <label for="email">Email address</label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+          </div>
+
+          <button class="button" type="submit">
+            Sign in <span aria-hidden="true">↗</span>
+          </button>
+
+          <p
+            class="auth-message"
+            id="login-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+
+        <div class="auth-demo-entry">
+          <a class="button button-outline" href="dashboard.html" data-demo-entry data-page-transition>Explore demo</a>
+          <p>Opens the dashboard with fictional sample content. This is not a real login.</p>
+        </div>
+
+        <p class="auth-switch">
+          New to SYNDEO?
+          <a href="register.html" data-page-transition>Create an account</a>
+        </p>
+
+        <p class="auth-switch">
+          <a href="../index.html" data-page-transition>← Back to home</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../js/auth.js" defer></script>
+</body>
+</html>

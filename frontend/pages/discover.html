@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101719">
+  <title>Discover Collaborators | SYNDEO</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</head>
+<body class="app-shell" data-page="discover">
+  <header class="app-header">
+    <nav class="app-nav container" aria-label="Main navigation">
+      <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
+      <span class="app-demo-indicator">Demo mode · sample data</span>
+      <div class="app-nav-links">
+        <a href="dashboard.html" data-page-transition>Home</a>
+        <a href="profile.html" data-page-transition>My profile</a>
+        <a href="discover.html" aria-current="page">Discover</a>
+        <a href="circles.html" data-page-transition>Circles</a>
+        <a href="projects.html" data-page-transition>Projects</a>
+        <a href="../index.html" data-page-transition>Back to SYNDEO</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <header class="app-heading">
+      <p class="eyebrow">FIND A NEW PERSPECTIVE</p>
+      <h1>People to build with.</h1>
+      <p>Explore a small set of fictional collaborators and see how different strengths might complement one another.</p>
+    </header>
+
+    <p class="demo-notice" role="note"><strong>Illustrative demo content.</strong> These fictional profiles and collaboration notes are examples only—not live users or results from SYNDEO's matching algorithm.</p>
+    <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="discovery-results-title">
+      <h2 class="visually-hidden" id="discovery-results-title">Suggested collaborators</h2>
+      <div class="discover-tools">
+        <div class="app-search">
+          <label for="collaborator-search">Search people, skills, or interests</label>
+          <input id="collaborator-search" type="search" placeholder="Try “design” or “climate”">
+        </div>
+        <div class="app-search">
+          <label for="skill-filter">Skill</label>
+          <select id="skill-filter"><option value="">Any skill</option></select>
+        </div>
+        <div class="app-search">
+          <label for="interest-filter">Interest</label>
+          <select id="interest-filter"><option value="">Any interest</option></select>
+        </div>
+      </div>
+      <p class="app-help" id="result-count" aria-live="polite"></p>
+      <div class="collaborator-list" id="collaborator-list"></div>
+    </section>
+  </main>
+
+  <dialog class="app-dialog" id="detail-dialog" aria-labelledby="detail-title">
+    <div class="app-dialog-content" id="detail-content">
+      <button class="button button-subtle dialog-close" type="button" data-close-dialog>Close</button>
+      <div id="detail-body"></div>
+    </div>
+  </dialog>
+</body>
+</html>

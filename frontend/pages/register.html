@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101719">
+  <meta
+    name="description"
+    content="Create your SYNDEO account and connect with people who share your ideas."
+  >
+
+  <title>Create Account | SYNDEO</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <script src="../js/page-transitions.js" defer></script>
+</head>
+
+<body>
+  <main class="auth-layout">
+
+    <section class="auth-brand">
+      <a class="auth-logo" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
+
+      <div class="auth-brand-content">
+        <p class="eyebrow">START SOMETHING MEANINGFUL</p>
+        <h1>Your next chapter starts here.</h1>
+        <p>
+          Meet people who share your interests, discover new opportunities,
+          and turn your ideas into something real.
+        </p>
+      </div>
+
+      <footer class="auth-brand-footer">
+        A space to connect. A place to create.
+      </footer>
+    </section>
+
+    <section class="auth-panel" aria-labelledby="register-title">
+      <div class="auth-form-wrap">
+        <p class="eyebrow">JOIN SYNDEO</p>
+        <h2 id="register-title">Create your account.</h2>
+        <p class="auth-subtitle">
+          Tell us a little about yourself to get started.
+        </p>
+        <p class="auth-backend-note">Account creation is not connected yet. You can still explore the frontend demo without creating an account.</p>
+
+        <form class="auth-form" id="register-form">
+          <div class="form-field">
+            <label for="full-name">Full name</label>
+            <input
+              id="full-name"
+              name="fullName"
+              type="text"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="register-email">Email address</label>
+            <input
+              id="register-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="register-password">Password</label>
+            <input
+              id="register-password"
+              name="password"
+              type="password"
+              placeholder="At least 8 characters"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              id="confirm-password"
+              name="confirmPassword"
+              type="password"
+              placeholder="Enter your password again"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
+          </div>
+
+          <button class="button" type="submit">
+            Create account <span aria-hidden="true">↗</span>
+          </button>
+
+          <p
+            class="auth-message"
+            id="register-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+
+        <div class="auth-demo-entry">
+          <a class="button button-outline" href="dashboard.html" data-demo-entry data-page-transition>Explore demo</a>
+          <p>Opens the dashboard with fictional sample content. This does not create an account.</p>
+        </div>
+
+        <p class="auth-switch">
+          Already have an account?
+          <a href="login.html" data-page-transition>Sign in</a>
+        </p>
+
+        <p class="auth-switch">
+          <a href="../index.html" data-page-transition>Back to home</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../js/auth.js" defer></script>
+</body>
+</html>

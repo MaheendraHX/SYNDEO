@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page metadata and the shared plus landing-page stylesheets. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="SYNDEO is a student project about finding people who share your interests, complement your skills, and may want to work on a project together."
+  >
+  <meta name="theme-color" content="#101719">
+  <title>SYNDEO — Find people to make things with</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <script src="js/landing.js" defer></script>
+  <script src="js/page-transitions.js" defer></script>
+</head>
+
+<body class="landing-page" id="top">
+  <!-- Compact navigation keeps the main destinations available without JavaScript. -->
+  <header class="landing-header">
+    <nav class="landing-nav container" aria-label="Main navigation">
+      <a class="landing-wordmark" href="index.html" aria-label="SYNDEO home">SYNDEO<span aria-hidden="true">.</span></a>
+      <div class="landing-nav-links">
+        <a href="#idea">The idea</a>
+        <a href="#path">How it could work</a>
+        <a href="pages/login.html" data-page-transition>Sign in</a>
+        <a class="landing-nav-cta" href="pages/register.html" data-page-transition>Join SYNDEO <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero pairs the existing student-focused message with an original liquid sculpture. -->
+    <section class="hero-section container" aria-labelledby="hero-title">
+      <div class="hero-heading">
+        <p class="hero-eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>A student project about finding collaborators</p>
+        <h1 id="hero-title" data-reveal="hero-title">Good ideas<br>don’t happen<br><span>alone.</span></h1>
+        <div class="hero-intro" data-reveal="hero-intro">
+          <p>Find people who think differently, build together, and turn shared curiosity into something real.</p>
+          <div class="hero-actions">
+            <a class="button hero-primary" href="pages/register.html" data-page-transition>Join SYNDEO <span aria-hidden="true">↗</span></a>
+            <a class="hero-secondary" href="#idea">Understand the idea <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-sculpture" data-reveal="hero-sculpture">
+          <svg viewBox="0 0 640 520" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="ribbon-teal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#79C8BD" stop-opacity="0.7" />
+                <stop offset="0.28" stop-color="#365A56" />
+                <stop offset="0.58" stop-color="#202B2C" />
+                <stop offset="0.8" stop-color="#527C74" />
+                <stop offset="1" stop-color="#79C8BD" stop-opacity="0.55" />
+              </linearGradient>
+              <linearGradient id="ribbon-copper" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#202B2C" />
+                <stop offset="0.42" stop-color="#9C6044" />
+                <stop offset="0.56" stop-color="#E58A52" />
+                <stop offset="0.72" stop-color="#496E68" />
+                <stop offset="1" stop-color="#202B2C" />
+              </linearGradient>
+              <linearGradient id="ribbon-edge" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#EAE5D9" stop-opacity="0.5" />
+                <stop offset="0.45" stop-color="#79C8BD" stop-opacity="0.04" />
+                <stop offset="0.72" stop-color="#EAE5D9" stop-opacity="0.34" />
+                <stop offset="1" stop-color="#79C8BD" stop-opacity="0.08" />
+              </linearGradient>
+            </defs>
+
+            <g class="sculpture-back">
+              <path class="sculpture-shadow" d="M82 372 C151 325 202 269 250 207 C290 156 274 111 237 94 C199 76 164 104 175 139 C191 190 267 224 341 226 C421 228 466 157 509 133 C550 110 584 139 578 177 C572 218 520 246 466 271 C403 300 369 340 378 384 C387 429 435 452 475 430 C502 415 520 386 539 360" />
+              <path class="sculpture-ribbon sculpture-ribbon-main" d="M82 372 C151 325 202 269 250 207 C290 156 274 111 237 94 C199 76 164 104 175 139 C191 190 267 224 341 226 C421 228 466 157 509 133 C550 110 584 139 578 177 C572 218 520 246 466 271 C403 300 369 340 378 384 C387 429 435 452 475 430 C502 415 520 386 539 360" />
+              <path class="sculpture-contour" d="M91 366 C157 319 205 264 254 205 C292 159 275 115 238 98" />
+              <path class="sculpture-contour sculpture-contour-lower" d="M384 384 C393 426 438 447 475 427 C499 414 516 387 533 364" />
+            </g>
+
+            <g class="sculpture-front">
+              <path class="sculpture-shadow sculpture-shadow-front" d="M146 421 C210 405 264 373 312 321 C356 273 397 240 453 238 C501 236 543 268 545 307 C547 345 512 372 477 363 C441 354 426 323 443 289 C461 253 512 228 566 179" />
+              <path class="sculpture-ribbon sculpture-ribbon-front" d="M146 421 C210 405 264 373 312 321 C356 273 397 240 453 238 C501 236 543 268 545 307 C547 345 512 372 477 363 C441 354 426 323 443 289 C461 253 512 228 566 179" />
+              <path class="sculpture-contour sculpture-contour-front" d="M158 416 C217 399 268 367 316 317 C359 272 400 244 453 243 C496 242 533 269 537 302" />
+              <path class="sculpture-contour sculpture-contour-front-lower" d="M479 357 C449 349 435 321 449 291 C465 258 512 234 560 185" />
+            </g>
+
+            <g class="sculpture-thread">
+              <path d="M109 391 C187 346 227 285 281 218 C317 173 355 164 390 174 C424 183 446 207 467 222" />
+            </g>
+          </svg>
+          <figcaption class="sculpture-caption">
+            <span class="sculpture-caption-title">One starting point. More than one way to meet.</span>
+            <span>Your starting point: an interest · a skill · an idea — shared interests, complementary skills, a project to explore.</span>
+            <span class="sculpture-caption-note">The idea behind SYNDEO</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- The idea stays on the shared midnight-teal canvas and describes an intention. -->
+    <section class="idea-section" id="idea" aria-labelledby="idea-title">
+      <div class="container idea-layout">
+        <p class="section-index"><span>01</span> / The idea</p>
+        <div class="idea-content" data-reveal="idea-content">
+          <h2 id="idea-title">Good work can begin with a conversation.</h2>
+          <div class="idea-copy">
+            <p>Sometimes you have a subject you keep coming back to. Sometimes you have a useful skill, but no project to put it toward. SYNDEO’s purpose is to help students explore where those starting points might meet.</p>
+            <p class="idea-caveat">This page describes what the project is intended to help with; it does not promise that every capability is already available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The three concepts form one connected sequence rather than repeated feature cards. -->
+    <section class="path-section" id="path" aria-labelledby="path-title">
+      <div class="container path-layout">
+        <div class="path-lead" data-reveal="path-lead">
+          <p class="section-index"><span>02</span> / A possible path</p>
+          <h2 id="path-title">From curiosity<br>to <em>working together.</em></h2>
+          <p class="path-intro">These are the ideas that shape SYNDEO—not claims about a finished feature set.</p>
+        </div>
+        <ol class="path-steps">
+          <li class="path-step path-step-discover" data-reveal="path-step">
+            <span class="step-marker" aria-hidden="true">01</span>
+            <div><h3>Discover</h3><p>Notice people, interests, opportunities, or projects that connect with what you care about.</p></div>
+            <span class="step-direction" aria-hidden="true">↘</span>
+          </li>
+          <li class="path-step path-step-connect" data-reveal="path-step">
+            <span class="step-marker" aria-hidden="true">02</span>
+            <div><h3>Connect</h3><p>Look for shared interests or skills that fit together in a different way.</p></div>
+            <span class="step-direction" aria-hidden="true">↘</span>
+          </li>
+          <li class="path-step path-step-collaborate" data-reveal="path-step">
+            <span class="step-marker" aria-hidden="true">03</span>
+            <div><h3>Collaborate</h3><p>Explore what you could work on together, from an early idea to a shared project.</p></div>
+            <span class="step-direction step-direction-end" aria-hidden="true">→</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- The closing invitation is direct and uses the existing registration destination. -->
+    <section class="invitation-section" aria-labelledby="invitation-title">
+      <div class="container invitation-inner" data-reveal="invitation">
+        <div class="invitation-copy">
+          <p class="section-index"><span>03</span> / Your turn</p>
+          <h2 id="invitation-title">Bring a question.<br><span>Meet another point of view.</span></h2>
+        </div>
+        <div class="invitation-action">
+          <p>Have something you’d like to explore with other students?</p>
+          <a class="button invitation-button" href="pages/register.html" data-page-transition>Join SYNDEO <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer repeats useful destinations without inventing external contact or social links. -->
+  <footer class="landing-footer">
+    <div class="container footer-top">
+      <a class="landing-wordmark footer-wordmark" href="index.html" aria-label="SYNDEO home">SYNDEO<span aria-hidden="true">.</span></a>
+      <p class="footer-description">A student project about finding people to explore ideas with.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#idea">The idea</a>
+        <a href="#path">A possible path</a>
+        <a href="pages/login.html" data-page-transition>Sign in</a>
+        <a href="pages/register.html" data-page-transition>Join SYNDEO</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 SYNDEO</span>
+      <a href="#top" class="footer-back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

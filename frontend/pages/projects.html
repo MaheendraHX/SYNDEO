@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101719">
+  <title>Projects | SYNDEO</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</head>
+<body class="app-shell" data-page="projects">
+  <header class="app-header">
+    <nav class="app-nav container" aria-label="Main navigation">
+      <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
+      <span class="app-demo-indicator">Demo mode · sample data</span>
+      <div class="app-nav-links">
+        <a href="dashboard.html" data-page-transition>Home</a>
+        <a href="profile.html" data-page-transition>My profile</a>
+        <a href="discover.html" data-page-transition>Discover</a>
+        <a href="circles.html" data-page-transition>Circles</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="../index.html" data-page-transition>Back to SYNDEO</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <header class="app-heading">
+      <p class="eyebrow">IDEAS INTO ACTION</p>
+      <h1>Projects and tasks.</h1>
+      <p>Keep a simple view of what a collaboration is working on and the tasks that move it forward.</p>
+    </header>
+
+    <p class="demo-notice" role="note"><strong>Frontend demo only.</strong> Sample projects, fictional assignees, and changes you make are saved in this browser only. Nothing is sent to a server or assigned to a real teammate.</p>
+    <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="projects-title">
+      <div class="circle-toolbar">
+        <div>
+          <h2 class="visually-hidden" id="projects-title">Projects</h2>
+          <p id="project-count" aria-live="polite"></p>
+        </div>
+        <button class="button" id="toggle-create-project" type="button" aria-expanded="false" aria-controls="create-project-panel">Create a project</button>
+      </div>
+      <div class="project-list" id="project-list"></div>
+    </section>
+
+    <section class="app-panel create-project-panel" id="create-project-panel" aria-labelledby="create-project-title" hidden>
+      <h2 id="create-project-title">Start a project.</h2>
+      <p class="app-panel-intro">Add a name and a short purpose. This creates a local demo project on this device only.</p>
+      <form class="app-form" id="project-form">
+        <div class="app-form-grid">
+          <div class="app-field">
+            <label for="project-name">Project name</label>
+            <input id="project-name" name="name" type="text" maxlength="70" required placeholder="e.g. Campus garden guide">
+          </div>
+          <div class="app-field">
+            <label for="project-circle">Related circle <span class="app-help">(optional)</span></label>
+            <select id="project-circle" name="circleId">
+              <option value="">No circle selected</option>
+            </select>
+          </div>
+          <div class="app-field app-field-full">
+            <label for="project-description">Description</label>
+            <textarea id="project-description" name="description" maxlength="320" required placeholder="What will this project explore or make?"></textarea>
+          </div>
+        </div>
+        <div class="app-actions">
+          <button class="button" type="submit">Create local demo project</button>
+          <button class="button button-outline" id="cancel-create-project" type="button">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="project-detail app-panel" id="project-detail" aria-labelledby="project-detail-title" hidden>
+      <div class="project-detail-heading">
+        <div>
+          <p class="eyebrow">PROJECT TASKS</p>
+          <h2 id="project-detail-title"></h2>
+          <p id="project-detail-description"></p>
+        </div>
+        <button class="button button-subtle" id="close-project" type="button">Close project</button>
+      </div>
+      <p class="project-circle-label" id="project-circle-label"></p>
+      <div class="project-progress-summary" id="project-progress-summary"></div>
+      <div class="project-progress-track" id="project-progress-track" role="progressbar" aria-label="Project task completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span id="project-progress"></span>
+      </div>
+
+      <div class="project-tasks-heading">
+        <h3>Tasks</h3>
+        <p class="app-help">Status changes and assignments are local demo updates.</p>
+      </div>
+      <div class="task-list" id="task-list"></div>
+
+      <div class="task-form-wrap">
+        <h3>Add a task</h3>
+        <form class="app-form" id="task-form">
+          <div class="app-form-grid">
+            <div class="app-field app-field-full">
+              <label for="task-title">Task title</label>
+              <input id="task-title" name="title" type="text" maxlength="100" required placeholder="What needs to be done?">
+            </div>
+            <div class="app-field app-field-full">
+              <label for="task-description">Description <span class="app-help">(optional)</span></label>
+              <textarea id="task-description" name="description" maxlength="320" placeholder="Add a little context if useful."></textarea>
+            </div>
+            <div class="app-field">
+              <label for="task-assignee">Sample collaborator <span class="app-help">(optional)</span></label>
+              <select id="task-assignee" name="assigneeId">
+                <option value="">Unassigned</option>
+                <option value="maya-chen">Maya Chen · fictional demo</option>
+                <option value="elias-roberts">Elias Roberts · fictional demo</option>
+                <option value="nina-patel">Nina Patel · fictional demo</option>
+                <option value="sam-okafor">Sam Okafor · fictional demo</option>
+              </select>
+              <small>Sample assignments are illustrative; no real teammate is assigned.</small>
+            </div>
+          </div>
+          <div class="app-actions">
+            <button class="button" type="submit">Add task locally</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

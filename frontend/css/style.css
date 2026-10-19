@@ -1,0 +1,292 @@
+
+/* ========================================
+   SYNDEO — SHARED DESIGN SYSTEM
+   ======================================== */
+
+/* 1. DESIGN TOKENS */
+
+:root {
+  /* Brand colors */
+  --color-bg: #101719;
+  --color-surface: #172122;
+  --color-surface-raised: #202B2C;
+  --color-accent: #E58A52;
+  --color-accent-secondary: #79C8BD;
+
+  /* Text colors */
+  --color-text: #EAE5D9;
+  --color-text-muted: #B6C0BB;
+
+  /* Borders and feedback */
+  --color-border: rgb(234 229 217 / 14%);
+  --color-border-strong: rgb(234 229 217 / 42%);
+  --color-danger: #FF7777;
+  --color-success: #79C8A1;
+
+  /* Typography */
+  --font-body: "DM Sans", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  /* Layout */
+  --container-width: 1160px;
+  --page-gutter: 32px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Shape and motion */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition-fast: 180ms ease;
+}
+
+/* 2. RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* 3. SHARED TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* 4. SHARED LAYOUT */
+
+.container {
+  width: min(
+    var(--container-width),
+    calc(100% - var(--page-gutter) * 2)
+  );
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-8);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* 5. SHARED BUTTONS */
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 12px 22px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 700;
+  text-align: center;
+ transition:
+  background var(--transition-fast),
+  color var(--transition-fast),
+  transform var(--transition-fast);
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.button-outline:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* 6. SHARED LINKS AND ACCESSIBILITY */
+
+.text-link {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.text-link:hover {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent-secondary);
+  outline-offset: 4px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body.page-transition-enter {
+  animation: page-enter 260ms ease-out both;
+}
+
+body.page-transition-exit {
+  animation: page-exit 150ms ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes page-exit {
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 7. RESPONSIVE DEFAULTS */
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 20px;
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .button {
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    min-width: 0;
+  }
+}
+
+/* 8. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body.page-transition-enter,
+  body.page-transition-exit {
+    animation: none;
+    pointer-events: auto;
+  }
+}
