@@ -2,13 +2,13 @@
   min-width: 0;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 80% 0%, rgb(121 200 189 / 4%), transparent 34rem),
+    radial-gradient(ellipse at 80% 0%, rgb(255 222 66 / 3%), transparent 34rem),
     var(--color-bg);
 }
 
 .app-header {
   border-bottom: 1px solid var(--color-border);
-  background: rgb(16 23 25 / 96%);
+  background: rgb(16 16 16 / 96%);
 }
 
 .app-nav {
@@ -34,9 +34,9 @@
 .app-demo-indicator {
   flex: 0 0 auto;
   padding: 0.3rem 0.55rem;
-  border: 1px solid rgb(121 200 189 / 32%);
+  border: 1px solid rgb(255 222 66 / 32%);
   border-radius: 999px;
-  background: rgb(121 200 189 / 7%);
+  background: rgb(255 222 66 / 7%);
   color: var(--color-accent-secondary);
   font-size: 0.68rem;
   font-weight: 700;
@@ -105,7 +105,7 @@
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent-secondary);
   border-radius: var(--radius-sm);
-  background: rgb(32 43 44 / 60%);
+  background: rgb(36 36 36 / 60%);
   color: var(--color-text-muted);
   font-size: 0.88rem;
   line-height: 1.6;
@@ -134,7 +134,7 @@
   padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgb(32 43 44 / 72%);
+  background: rgb(36 36 36 / 72%);
 }
 
 .app-panel h2 {
@@ -217,7 +217,7 @@
 .app-search input:focus,
 .app-search select:focus {
   border-color: var(--color-accent-secondary);
-  outline: 3px solid rgb(121 200 189 / 18%);
+  outline: 3px solid var(--color-accent-secondary);
   outline-offset: 1px;
 }
 
@@ -282,9 +282,9 @@
   gap: 0.4rem;
   max-width: 100%;
   padding: 0.18rem 0.65rem;
-  border: 1px solid rgb(121 200 189 / 35%);
+  border: 1px solid rgb(255 222 66 / 35%);
   border-radius: 999px;
-  background: rgb(121 200 189 / 8%);
+  background: rgb(255 222 66 / 8%);
   color: var(--color-text);
   font-size: 0.78rem;
   line-height: 1.35;
@@ -310,12 +310,12 @@ button.tag-chip {
 }
 
 .tag-chip-remove:hover {
-  background: rgb(234 229 217 / 12%);
+  background: rgb(245 245 240 / 12%);
 }
 
 .tag-chip-muted {
   border-color: var(--color-border);
-  background: rgb(234 229 217 / 4%);
+  background: rgb(245 245 240 / 4%);
   color: var(--color-text-muted);
 }
 
@@ -369,9 +369,9 @@ button.tag-chip {
   flex: 0 0 auto;
   place-items: center;
   overflow: hidden;
-  border: 1px solid rgb(121 200 189 / 40%);
+  border: 1px solid rgb(255 222 66 / 40%);
   border-radius: 50%;
-  background: #263c3c;
+  background: #242424;
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -484,7 +484,7 @@ button.tag-chip {
   padding: 1.35rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgb(32 43 44 / 72%);
+  background: rgb(36 36 36 / 72%);
 }
 
 .dashboard-card .eyebrow {
@@ -512,7 +512,7 @@ button.tag-chip {
   height: 0.42rem;
   overflow: hidden;
   border-radius: 999px;
-  background: rgb(234 229 217 / 12%);
+  background: rgb(245 245 240 / 12%);
 }
 
 .progress-track span {
@@ -551,7 +551,7 @@ button.tag-chip {
   padding: 1.25rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgb(32 43 44 / 72%);
+  background: rgb(36 36 36 / 72%);
 }
 
 .person-avatar {
@@ -563,7 +563,7 @@ button.tag-chip {
   overflow: hidden;
   border: 1px solid var(--color-border-strong);
   border-radius: 50%;
-  background: #263c3c;
+  background: #242424;
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1rem;
@@ -654,7 +654,7 @@ button.tag-chip {
   padding: 1.25rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgb(32 43 44 / 72%);
+  background: rgb(36 36 36 / 72%);
 }
 
 .circle-type {
@@ -703,7 +703,7 @@ button.tag-chip {
 }
 
 .app-dialog::backdrop {
-  background: rgb(5 10 11 / 78%);
+  background: rgb(0 0 0 / 78%);
 }
 
 .app-dialog-content {
@@ -754,7 +754,7 @@ button.tag-chip {
   padding: 1.2rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgb(32 43 44 / 72%);
+  background: rgb(36 36 36 / 72%);
 }
 
 .project-card-copy {
@@ -848,7 +848,7 @@ button.tag-chip {
   height: 0.5rem;
   overflow: hidden;
   border-radius: 999px;
-  background: rgb(234 229 217 / 12%);
+  background: rgb(245 245 240 / 12%);
 }
 
 .project-progress-track span {
@@ -889,7 +889,7 @@ button.tag-chip {
   padding: 0.9rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: rgb(16 23 25 / 45%);
+  background: rgb(16 16 16 / 45%);
 }
 
 .task-item-copy {

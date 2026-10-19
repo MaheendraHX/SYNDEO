@@ -7,19 +7,19 @@
 
 :root {
   /* Brand colors */
-  --color-bg: #101719;
-  --color-surface: #172122;
-  --color-surface-raised: #202B2C;
-  --color-accent: #E58A52;
-  --color-accent-secondary: #79C8BD;
+  --color-bg: #101010;
+  --color-surface: #1A1A1A;
+  --color-surface-raised: #242424;
+  --color-accent: #FFDE42;
+  --color-accent-secondary: #FFDE42;
 
   /* Text colors */
-  --color-text: #EAE5D9;
-  --color-text-muted: #B6C0BB;
+  --color-text: #F5F5F0;
+  --color-text-muted: #B8B8B0;
 
   /* Borders and feedback */
-  --color-border: rgb(234 229 217 / 14%);
-  --color-border-strong: rgb(234 229 217 / 42%);
+  --color-border: #333333;
+  --color-border-strong: rgb(245 245 240 / 42%);
   --color-danger: #FF7777;
   --color-success: #79C8A1;
 

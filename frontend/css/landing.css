@@ -221,7 +221,7 @@ html {
   z-index: -1;
   inset: 12%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgb(121 200 189 / 9%), transparent 70%);
+  background: radial-gradient(ellipse, rgb(255 222 66 / 7%), transparent 70%);
   content: "";
 }
 
@@ -264,7 +264,7 @@ html {
 }
 
 .sculpture-shadow {
-  stroke: #080E10;
+  stroke: #101010;
   stroke-width: 94;
   opacity: 0.68;
   transform: translate(0, 9px);
@@ -300,7 +300,7 @@ html {
 }
 
 .sculpture-thread path {
-  stroke: #79C8BD;
+  stroke: #FFDE42;
   stroke-width: 3;
   stroke-dasharray: 2 15;
   opacity: 0.54;

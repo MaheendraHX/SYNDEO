@@ -23,8 +23,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(145deg, transparent 45%, rgb(121 200 189 / 3%)),
-    radial-gradient(ellipse at 85% 78%, rgb(229 138 82 / 8%), transparent 45%);
+    linear-gradient(145deg, transparent 45%, rgb(255 222 66 / 3%)),
+    radial-gradient(ellipse at 85% 78%, rgb(255 222 66 / 5%), transparent 45%);
   content: "";
   pointer-events: none;
 }
@@ -39,8 +39,8 @@
   border: 1px solid var(--color-border);
   border-radius: 50%;
   box-shadow:
-    0 0 0 2.5rem rgb(234 229 217 / 2%),
-    0 0 0 5rem rgb(234 229 217 / 2%);
+    0 0 0 2.5rem rgb(245 245 240 / 2%),
+    0 0 0 5rem rgb(245 245 240 / 2%);
   pointer-events: none;
 }
 
@@ -189,7 +189,7 @@
 
 .form-field input:focus {
   border-color: var(--color-accent-secondary);
-  box-shadow: 0 0 0 3px rgb(121 200 189 / 18%);
+  box-shadow: 0 0 0 3px var(--color-accent-secondary);
 }
 
 .form-field input:hover:not(:focus):not(:disabled) {
