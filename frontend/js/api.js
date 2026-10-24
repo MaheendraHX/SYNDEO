@@ -1,6 +1,6 @@
 
 (() => {
-  const API_BASE_URL = "http://localhost:8080/api";
+ const API_BASE_URL = "https://syndeo-jdhp.onrender.com/api";
   const TOKEN_KEY = "syndeo.accessToken.v1";
 
   async function request(path, options = {}) {

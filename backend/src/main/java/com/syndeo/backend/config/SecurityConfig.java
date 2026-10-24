@@ -46,8 +46,8 @@ public class SecurityConfig {
     @Bean
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration config = new CorsConfiguration();
-
-   config.setAllowedOrigins(List.of(
+config.setAllowedOrigins(List.of(
+        "https://maheendrahx.github.io",
         "http://localhost:8000",
         "http://127.0.0.1:8000",
         "http://localhost:5500",
