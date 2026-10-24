@@ -9,19 +9,20 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/app.css">
   <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/api.js" defer></script>
   <script src="../js/app.js" defer></script>
 </head>
 <body class="app-shell" data-page="circles">
   <header class="app-header">
     <nav class="app-nav container" aria-label="Main navigation">
       <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
-      <span class="app-demo-indicator">Demo mode · sample data</span>
       <div class="app-nav-links">
         <a href="dashboard.html" data-page-transition>Home</a>
         <a href="profile.html" data-page-transition>My profile</a>
         <a href="discover.html" data-page-transition>Discover</a>
         <a href="circles.html" aria-current="page">Circles</a>
         <a href="projects.html" data-page-transition>Projects</a>
+        <a href="about.html" data-page-transition>About</a>
         <a href="../index.html" data-page-transition>Back to SYNDEO</a>
       </div>
     </nav>
@@ -34,7 +35,7 @@
       <p>Explore purpose-driven groups for learning, mentoring, and making things together—or sketch out a circle of your own.</p>
     </header>
 
-    <p class="demo-notice" role="note"><strong>Local demo only.</strong> Sample groups are fictional. Join, leave, and create actions are saved only in this browser; no group is created on a server and no one is notified.</p>
+    <p class="info-note" role="note"><strong>Circle information.</strong> Membership and circle details are loaded from the server. Tags are not stored by the current schema.</p>
     <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
 
     <section aria-labelledby="circles-title">
@@ -50,7 +51,7 @@
 
     <section class="app-panel create-circle-panel" id="create-circle-panel" aria-labelledby="create-circle-title" hidden>
       <h2 id="create-circle-title">Start with a shared purpose.</h2>
-      <p class="app-panel-intro">Describe what you would like to explore together. This creates a local demo circle on this device only.</p>
+      <p class="app-panel-intro">Describe what you would like to explore together. Your circle and owner membership will be created on the server.</p>
       <form class="app-form" id="circle-form">
         <div class="app-form-grid">
           <div class="app-field">
@@ -73,17 +74,20 @@
             <small>Write at least 20 characters to make the purpose clear.</small>
           </div>
           <div class="app-field app-field-full">
-            <label for="circle-tags">Skills or interests <span class="app-help">(optional, comma-separated)</span></label>
-            <input id="circle-tags" name="tags" type="text" maxlength="160" placeholder="e.g. research, climate, prototyping">
+            <p class="app-help">Circle tags are not saved because the current server schema has no tags field.</p>
           </div>
         </div>
         <div class="app-actions">
-          <button class="button" type="submit">Create local demo circle</button>
+          <button class="button" type="submit">Create circle</button>
           <button class="button button-outline" id="cancel-create-circle" type="button">Cancel</button>
         </div>
       </form>
     </section>
   </main>
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" data-page-transition>About SYNDEO</a>
+  </footer>
 
   <dialog class="app-dialog" id="detail-dialog" aria-labelledby="detail-title">
     <div class="app-dialog-content">

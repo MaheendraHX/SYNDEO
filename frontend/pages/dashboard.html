@@ -9,19 +9,20 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/app.css">
   <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/api.js" defer></script>
   <script src="../js/app.js" defer></script>
 </head>
 <body class="app-shell" data-page="dashboard">
   <header class="app-header">
     <nav class="app-nav container" aria-label="Main navigation">
       <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
-      <span class="app-demo-indicator">Demo mode · sample data</span>
       <div class="app-nav-links">
         <a href="dashboard.html" aria-current="page">Home</a>
         <a href="profile.html" data-page-transition>My profile</a>
         <a href="discover.html" data-page-transition>Discover</a>
         <a href="circles.html" data-page-transition>Circles</a>
         <a href="projects.html" data-page-transition>Projects</a>
+        <a href="about.html" data-page-transition>About</a>
         <a href="../index.html" data-page-transition>Back to SYNDEO</a>
       </div>
     </nav>
@@ -34,9 +35,7 @@
       <p>Shape a profile around what you bring, discover different perspectives, and find a shared purpose to explore.</p>
     </header>
 
-    <p class="demo-notice" role="note">Frontend demo: profile details, sample suggestions, and circle actions are illustrative and stored locally in this browser only. There is no connected account or backend data yet.</p>
-    <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
-
+    <div class="app-message" id="app-message" role="status" aria-live="polite"></div>
     <section class="dashboard-grid" aria-label="Start exploring SYNDEO">
       <article class="dashboard-card">
         <p class="eyebrow">01 / YOUR PROFILE</p>
@@ -49,24 +48,28 @@
       <article class="dashboard-card">
         <p class="eyebrow">02 / DIFFERENT PERSPECTIVES</p>
         <h2>Meet possible collaborators.</h2>
-        <p>Explore a small set of fictional examples and see how skills and interests could complement one another.</p>
+        <p>Search profiles from active SYNDEO accounts by skills and interests. Results are not ranked recommendations.</p>
         <a href="discover.html" data-page-transition>Explore people ↗</a>
       </article>
 
       <article class="dashboard-card">
         <p class="eyebrow">03 / SHARED PURPOSE</p>
         <h2>Find your circle.</h2>
-        <p>Browse example study groups, project teams, and other ways people could learn or build together.</p>
+        <p>Browse circles, check membership, and create or join a group around a shared purpose.</p>
         <a href="circles.html" data-page-transition>Explore circles ↗</a>
       </article>
 
       <article class="dashboard-card">
         <p class="eyebrow">04 / MAKE PROGRESS</p>
         <h2>Move a project forward.</h2>
-        <p>Explore fictional sample projects, add tasks, and track their progress in this browser demo.</p>
+        <p>Browse projects, manage membership, and track project tasks and assignments.</p>
         <a href="projects.html" data-page-transition>Explore projects ↗</a>
       </article>
     </section>
   </main>
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" data-page-transition>About SYNDEO</a>
+  </footer>
 </body>
 </html>

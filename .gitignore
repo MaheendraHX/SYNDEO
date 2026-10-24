@@ -33,5 +33,20 @@ playwright-report/
 test-results/
 **/target/
 **/build/
+**/out/
 *.log
 *.tmp
+
+# Java IDE metadata
+**/.idea/
+**/.vscode/
+*.iml
+**/.classpath
+**/.project
+**/.settings/
+
+# Local backup of backend configuration
+backend/src/main/resources/application.properties.bak-*
+
+# Local backup of backend configuration
+backend/src/main/resources/application.properties.bak-*

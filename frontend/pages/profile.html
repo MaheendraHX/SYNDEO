@@ -9,19 +9,20 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/app.css">
   <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/api.js" defer></script>
   <script src="../js/app.js" defer></script>
 </head>
 <body class="app-shell" data-page="profile">
   <header class="app-header">
     <nav class="app-nav container" aria-label="Main navigation">
       <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
-      <span class="app-demo-indicator">Demo mode · sample data</span>
       <div class="app-nav-links">
         <a href="dashboard.html" data-page-transition>Home</a>
         <a href="profile.html" aria-current="page">My profile</a>
         <a href="discover.html" data-page-transition>Discover</a>
         <a href="circles.html" data-page-transition>Circles</a>
         <a href="projects.html" data-page-transition>Projects</a>
+        <a href="about.html" data-page-transition>About</a>
         <a href="../index.html" data-page-transition>Back to SYNDEO</a>
       </div>
     </nav>
@@ -34,7 +35,12 @@
       <p>Share the skills, interests, experience, and availability you would bring to a collaboration. You can review everything before saving.</p>
     </header>
 
-    <p class="demo-notice" role="note">Frontend demo: your profile is stored only in this browser on this device. It is not synced to SYNDEO or visible to other people.</p>
+    <p class="info-note" role="note">Profile details are loaded from and saved to your SYNDEO account. Your selected profile photo is stored only in this browser and is not uploaded.</p>
+    <section class="app-panel" aria-labelledby="account-identity-title">
+      <h2 id="account-identity-title">Your SYNDEO account</h2>
+      <p id="account-identity-name">Loading account…</p>
+      <p id="account-identity-email"></p>
+    </section>
     <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
 
     <div class="profile-layout">
@@ -59,7 +65,7 @@
               <label for="profile-photo">Profile picture <span class="app-help">(optional)</span></label>
               <div class="profile-photo-control">
                 <input id="profile-photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp">
-                <small>Choose a JPG, PNG, or WebP image up to 1 MB. The picture stays in this browser demo.</small>
+                <small>Choose a JPG, PNG, or WebP image up to 1 MB. The photo is stored in this browser, not uploaded.</small>
                 <div class="profile-photo-actions">
                   <button class="button button-subtle" id="remove-photo" type="button" hidden>Remove picture</button>
                 </div>
@@ -152,5 +158,9 @@
       </aside>
     </div>
   </main>
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" data-page-transition>About SYNDEO</a>
+  </footer>
 </body>
 </html>

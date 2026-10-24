@@ -143,15 +143,6 @@
   line-height: 1.7;
 }
 
-.auth-backend-note {
-  margin: -1.25rem 0 1.5rem;
-  padding-left: 0.8rem;
-  border-left: 2px solid var(--color-accent-secondary);
-  color: var(--color-text-muted);
-  font-size: 0.84rem;
-  line-height: 1.6;
-}
-
 .auth-form {
   display: grid;
   gap: 1.25rem;
@@ -167,7 +158,8 @@
   font-weight: 600;
 }
 
-.form-field input {
+.form-field input,
+.form-field select {
   width: 100%;
   min-height: 3.25rem;
   padding: 0.85rem 1rem;
@@ -176,10 +168,21 @@
   outline: none;
   background: var(--color-surface);
   color: var(--color-text);
+  color-scheme: dark;
   font: inherit;
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
+}
+
+.form-field select {
+  padding-right: 2.75rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%23FFDE42' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 0.9rem;
+  cursor: pointer;
 }
 
 .form-field input::placeholder {
@@ -187,21 +190,25 @@
   opacity: 0.75;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+.form-field select:focus {
   border-color: var(--color-accent-secondary);
   box-shadow: 0 0 0 3px var(--color-accent-secondary);
 }
 
-.form-field input:hover:not(:focus):not(:disabled) {
+.form-field input:hover:not(:focus):not(:disabled),
+.form-field select:hover:not(:focus):not(:disabled) {
   border-color: var(--color-border-strong);
 }
 
-.form-field input:user-invalid {
+.form-field input:user-invalid,
+.form-field select:user-invalid {
   border-color: var(--color-danger);
   box-shadow: 0 0 0 3px rgb(255 119 119 / 12%);
 }
 
-.form-field input:disabled {
+.form-field input:disabled,
+.form-field select:disabled {
   cursor: not-allowed;
   opacity: 0.65;
 }
@@ -251,24 +258,6 @@
   display: none;
 }
 
-.auth-demo-entry {
-  display: grid;
-  gap: 0.45rem;
-  margin-top: 1rem;
-}
-
-.auth-demo-entry .button {
-  width: 100%;
-}
-
-.auth-demo-entry p {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 0.78rem;
-  line-height: 1.5;
-  text-align: center;
-}
-
 @media (max-width: 800px) {
   .auth-layout {
     grid-template-columns: 1fr;
@@ -306,6 +295,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .form-field input,
+  .form-field select,
   .auth-switch a,
   .auth-form .button {
     transition: none;

@@ -9,19 +9,20 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/app.css">
   <script src="../js/page-transitions.js" defer></script>
+  <script src="../js/api.js" defer></script>
   <script src="../js/app.js" defer></script>
 </head>
 <body class="app-shell" data-page="discover">
   <header class="app-header">
     <nav class="app-nav container" aria-label="Main navigation">
       <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
-      <span class="app-demo-indicator">Demo mode · sample data</span>
       <div class="app-nav-links">
         <a href="dashboard.html" data-page-transition>Home</a>
         <a href="profile.html" data-page-transition>My profile</a>
         <a href="discover.html" aria-current="page">Discover</a>
         <a href="circles.html" data-page-transition>Circles</a>
         <a href="projects.html" data-page-transition>Projects</a>
+        <a href="about.html" data-page-transition>About</a>
         <a href="../index.html" data-page-transition>Back to SYNDEO</a>
       </div>
     </nav>
@@ -31,14 +32,14 @@
     <header class="app-heading">
       <p class="eyebrow">FIND A NEW PERSPECTIVE</p>
       <h1>People to build with.</h1>
-      <p>Explore a small set of fictional collaborators and see how different strengths might complement one another.</p>
+      <p>Explore collaboration profiles and compare skills, interests, goals, and availability.</p>
     </header>
 
-    <p class="demo-notice" role="note"><strong>Illustrative demo content.</strong> These fictional profiles and collaboration notes are examples only—not live users or results from SYNDEO's matching algorithm.</p>
+    <p class="info-note" role="note"><strong>Profile discovery.</strong> Profiles shown here are provided by active SYNDEO accounts. Results are not ranked recommendations.</p>
     <p class="app-message" id="app-message" role="status" aria-live="polite"></p>
 
     <section aria-labelledby="discovery-results-title">
-      <h2 class="visually-hidden" id="discovery-results-title">Suggested collaborators</h2>
+      <h2 class="visually-hidden" id="discovery-results-title">Collaboration profiles</h2>
       <div class="discover-tools">
         <div class="app-search">
           <label for="collaborator-search">Search people, skills, or interests</label>
@@ -57,6 +58,10 @@
       <div class="collaborator-list" id="collaborator-list"></div>
     </section>
   </main>
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" data-page-transition>About SYNDEO</a>
+  </footer>
 
   <dialog class="app-dialog" id="detail-dialog" aria-labelledby="detail-title">
     <div class="app-dialog-content" id="detail-content">

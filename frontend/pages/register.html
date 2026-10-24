@@ -45,8 +45,6 @@
         <p class="auth-subtitle">
           Tell us a little about yourself to get started.
         </p>
-        <p class="auth-backend-note">Account creation is not connected yet. You can still explore the frontend demo without creating an account.</p>
-
         <form class="auth-form" id="register-form">
           <div class="form-field">
             <label for="full-name">Full name</label>
@@ -70,6 +68,18 @@
               autocomplete="email"
               required
             >
+          </div>
+
+          <div class="form-field">
+            <label for="account-type">Account type</label>
+            <select id="account-type" name="accountType" required>
+              <option value="">Choose your account type</option>
+              <option value="STUDENT">Student</option>
+              <option value="PROFESSIONAL">Professional</option>
+              <option value="FREELANCER">Freelancer</option>
+              <option value="MENTOR">Mentor</option>
+              <option value="ORGANIZATION">Organization</option>
+            </select>
           </div>
 
           <div class="form-field">
@@ -110,11 +120,6 @@
           ></p>
         </form>
 
-        <div class="auth-demo-entry">
-          <a class="button button-outline" href="dashboard.html" data-demo-entry data-page-transition>Explore demo</a>
-          <p>Opens the dashboard with fictional sample content. This does not create an account.</p>
-        </div>
-
         <p class="auth-switch">
           Already have an account?
           <a href="login.html" data-page-transition>Sign in</a>
@@ -128,6 +133,12 @@
 
   </main>
 
-  <script src="../js/auth.js" defer></script>
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" data-page-transition>About SYNDEO</a>
+  </footer>
+
+ <script src="../js/api.js" defer></script>
+ <script src="../js/auth.js" defer></script>
 </body>
 </html>

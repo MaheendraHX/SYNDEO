@@ -149,6 +149,28 @@ p {
   margin-inline: auto;
 }
 
+.site-credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.8rem;
+  padding: 1.1rem var(--page-gutter);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.site-credit a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+
+.site-credit a:hover {
+  text-decoration: underline;
+}
+
 .section {
   padding-block: var(--space-8);
 }

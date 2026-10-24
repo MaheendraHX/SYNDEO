@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta
+    name="description"
+    content="About SYNDEO, the KTU OOP project by Group 8."
+  >
+  <title>About SYNDEO | KTU OOP Project</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/syndeo-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="../js/page-transitions.js" defer></script>
+</head>
+<body class="app-shell" data-page="about">
+  <header class="app-header">
+    <nav class="app-nav container" aria-label="Main navigation">
+      <a class="app-wordmark" href="../index.html" data-page-transition>SYNDEO<span>.</span></a>
+      <div class="app-nav-links">
+        <a href="../index.html" data-page-transition>Home</a>
+        <a href="login.html" data-page-transition>Sign in</a>
+        <a href="register.html" data-page-transition>Join SYNDEO</a>
+        <a href="about.html" aria-current="page">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main about-main">
+    <header class="app-heading about-heading">
+      <p class="eyebrow">APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY</p>
+      <h1>SYNDEO — Intelligent Skill &amp; Collaboration Management System</h1>
+      <p>Object-Oriented Programming Project · KTU · Group 8</p>
+    </header>
+
+    <section class="about-section" aria-labelledby="abstract-title">
+      <p class="eyebrow">01 / PROJECT ABSTRACT</p>
+      <h2 id="abstract-title">The idea and its purpose</h2>
+      <div class="about-copy">
+        <p>SYNDEO is an Intelligent Skill &amp; Collaboration Management System intended to connect students, professionals, freelancers, mentors, and organizations through shared competencies, interests, goals, and availability. In academic and professional environments, fragmented skill discovery and ineffective networking can make it difficult to find compatible collaborators. SYNDEO addresses this challenge through profiles that describe skills, areas of interest, practical experience, and availability.</p>
+        <p>The project aims to support purpose-driven collaboration, including study groups, project teams, mentorship networks, and professional associations. By bringing skill-related information and collaboration activities into one system, SYNDEO seeks to make team formation and peer-to-peer knowledge sharing more structured.</p>
+        <p>The application uses Java and Spring Boot for backend services and business logic, with HTML, CSS, and JavaScript for its web interface. MySQL provides relational data storage. The schema organizes users, profiles, skills, interests, circles, projects, memberships, and tasks relationally, targeting Third Normal Form (3NF). The backend uses JDBC through Spring's <code>JdbcTemplate</code>, Java collections for application data, and exception handling for API errors.</p>
+        <p>The project is developed on Windows using Visual Studio Code and is accessed through a web browser.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="implementation-title">
+      <p class="eyebrow">02 / CURRENT IMPLEMENTATION</p>
+      <h2 id="implementation-title">What the application currently supports</h2>
+      <div class="about-copy">
+        <p>The backend and web interface currently include account registration and sign-in, authenticated profile loading and editing, profile discovery with search and filters, circle membership, project membership, and project task creation and updates. Profile photos are stored in the current browser and are not uploaded to the server. Circle tags are not persisted because the database schema has no tags field.</p>
+        <p>Discovery currently lists eligible active profiles and applies profile search and filters; it does not calculate or rank recommendations. The database contains a recommendation-log schema, but a recommendation engine and recommendation API are not implemented.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="guide-title">
+      <p class="eyebrow">03 / PROJECT GUIDE</p>
+      <h2 id="guide-title">Guided by</h2>
+      <div class="about-guide">
+        <h3>Ms. Ashwathy Ramakrishnan</h3>
+        <p>Assistant Professor</p>
+        <p>Department of Computer Science and Engineering</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="team-title">
+      <p class="eyebrow">04 / THE TEAM</p>
+      <h2 id="team-title">Group 8</h2>
+      <ol class="about-team">
+        <li class="about-member">
+          <span class="about-member-number">01</span>
+          <div><h3>KB Gourishankar</h3><p>TOC25CS106</p></div>
+          <span class="about-member-role">Team Lead</span>
+        </li>
+        <li class="about-member">
+          <span class="about-member-number">02</span>
+          <div><h3>Biya Mary George</h3><p>TOC25CS065</p></div>
+        </li>
+        <li class="about-member">
+          <span class="about-member-number">03</span>
+          <div><h3>Jewel Mariya Jayesh</h3><p>TOC25CS097</p></div>
+        </li>
+        <li class="about-member">
+          <span class="about-member-number">04</span>
+          <div><h3>Kailasanadhan</h3><p>TOC25CS103</p></div>
+        </li>
+        <li class="about-member">
+          <span class="about-member-number">05</span>
+          <div><h3>Maheendra Menon</h3><p>TOC25CS113</p></div>
+        </li>
+        <li class="about-member">
+          <span class="about-member-number">06</span>
+          <div><h3>Dharshan Sangeesh</h3><p>TOC25CS077</p></div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-credit">
+    <span>An OOP Project · KTU · Group 8</span>
+    <a href="about.html" aria-current="page">About SYNDEO</a>
+  </footer>
+</body>
+</html>
